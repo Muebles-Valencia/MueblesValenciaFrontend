@@ -133,25 +133,18 @@ export const NavHome = () => {
     }
 
     useEffect(() => {
-        const user = sessionStorage.getItem("usuario")
-        const admin = sessionStorage.getItem("administrador")
-        if (user == null) {
-            document.getElementById("logout").classList.add("logoutHide")
-        } else {
-            const user2 = JSON.parse(user.toString());
-            document.getElementById("nameAccount").textContent = user2.nameU
-            document.getElementById("logout").classList.remove("logoutHide")
-        }
-        if(admin == null){
-            document.getElementById("logout").classList.add("logoutHide")            
-        }else{
-            const admin = sessionStorage.getItem("administrador")
-            const admin2 = JSON.parse(admin.toString());
-            document.getElementById("nameAccount").textContent = admin2.nameU    
-            document.getElementById("inventoryIcon").classList.remove("invt")
-            document.getElementById("logout").classList.remove("logoutHide")
-        }
-    }, [])
+    const user = sessionStorage.getItem("usuario")
+    if (user != null || user != ""){
+        console.log(document.getElementById("logout"));
+        document.getElementById("logout").classList.remove("logoutHide")
+        console.log("USUARIO");
+        console.log(user);
+        const user2 = JSON.parse(user.toString());
+        document.getElementById("nameAccount").textContent = user2.nameU
+    }else if(user == null || user == ""){
+        document.getElementById("logout").classList.add("logoutHide")
+    }
+}, [])
 
     function login() {
         const urlEndpoint = 'https://muebleriaback.herokuapp.com/oauth/token';
