@@ -141,7 +141,7 @@ export const NavHome = () => {
         console.log(user);
         const user2 = JSON.parse(user.toString());
         document.getElementById("nameAccount").textContent = user2.nameU
-    }else if(user == null || user == ""){
+    }else {
         document.getElementById("logout").classList.add("logoutHide")
     }
 }, [])
