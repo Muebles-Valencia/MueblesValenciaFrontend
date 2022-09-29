@@ -10,13 +10,17 @@ import './MQuery360X740.css'
 export const HeaderHome = () => {
   useEffect(() => {
     const user = sessionStorage.getItem("usuario")
+    const admin = sessionStorage.getItem("administrador")
     if (user == null || user == ""){
         document.getElementById("logout").classList.add("logoutHide")
     }else {
         document.getElementById("logout").classList.remove("logoutHide")
         const user2 = JSON.parse(user.toString());
         document.getElementById("nameAccount").textContent = user2.nameU
-    }
+        if(admin != null || admin != ""){
+           document.getElementById("inventoryIcon").classList.remove("invt")
+        }
+     }
 }, [])
   return (
     <div className='header-user'>
