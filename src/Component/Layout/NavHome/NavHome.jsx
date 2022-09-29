@@ -123,6 +123,7 @@ export const NavHome = () => {
                 let tokenAdmin = localStorage.getItem('admin')
                 guardarAdmin(token.access_token)
                 setVisible(false)            
+                guardarUsuario(token.access_token)
                 const admin = sessionStorage.getItem("administrador")
                 const admin2 = JSON.parse(admin.toString());
                 document.getElementById("nameAccount").textContent = admin2.nameU
