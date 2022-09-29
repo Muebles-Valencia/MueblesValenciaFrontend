@@ -132,20 +132,16 @@ export const NavHome = () => {
         }
     }
 
-    useEffect(() => {
+useEffect(() => {
     const user = sessionStorage.getItem("usuario")
-    if (user != null || user != ""){
-        console.log(document.getElementById("logout"));
+    if (user == null || user == ""){
+        document.getElementById("logout").classList.add("logoutHide")
+    }else {
         document.getElementById("logout").classList.remove("logoutHide")
-        console.log("USUARIO");
-        console.log(user);
         const user2 = JSON.parse(user.toString());
         document.getElementById("nameAccount").textContent = user2.nameU
-    }else {
-        document.getElementById("logout").classList.add("logoutHide")
     }
 }, [])
-
     function login() {
         const urlEndpoint = 'http://localhost:8080/oauth/token';
         const credenciales = btoa('reactapp' + ':' + '12345');
