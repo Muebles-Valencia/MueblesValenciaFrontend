@@ -134,7 +134,7 @@ export const NavHome = () => {
 
     useEffect(() => {
     const user = sessionStorage.getItem("usuario")
-    if (user != null || user != ""){
+    if (user != null && user != ""){
         console.log(document.getElementById("logout"));
         document.getElementById("logout").classList.remove("logoutHide")
         console.log("USUARIO");
