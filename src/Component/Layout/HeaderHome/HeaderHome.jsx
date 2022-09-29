@@ -10,12 +10,12 @@ import './MQuery360X740.css'
 export const HeaderHome = () => {
   useEffect(() => {
     const user = sessionStorage.getItem("usuario")
-    if (user != null || user != ""){
+    if (user == null || user == ""){
+        document.getElementById("logout").classList.add("logoutHide")
+    }else {
         document.getElementById("logout").classList.remove("logoutHide")
         const user2 = JSON.parse(user.toString());
         document.getElementById("nameAccount").textContent = user2.nameU
-    }else if(user == null || user == ""){
-        document.getElementById("logout").classList.add("logoutHide")
     }
 }, [])
   return (
