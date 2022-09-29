@@ -15,6 +15,7 @@ const useAuth = () => {
 }
 
 const ProtectedRoutes = () => {
+  let navigate = useNavigate()
   const isAuth = useAuth();
   return isAuth ? <Outlet/> : navigate("/");
 }
