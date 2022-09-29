@@ -17,7 +17,7 @@ export const HeaderHome = () => {
         document.getElementById("logout").classList.remove("logoutHide")
         const user2 = JSON.parse(user.toString());
         document.getElementById("nameAccount").textContent = user2.nameU
-        if(admin != null || admin != ""){
+        if(user2.stateU != "1"){
            document.getElementById("inventoryIcon").classList.remove("invt")
         }
      }
