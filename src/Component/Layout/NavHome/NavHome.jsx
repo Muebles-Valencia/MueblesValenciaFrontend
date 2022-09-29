@@ -88,9 +88,9 @@ export const NavHome = () => {
     const guardarAdmin = (accessToken = "") => {
 
         let payload = obtenerDatosToken(accessToken);
-        adminActivo.nameU = payload.nombre;
+        adminActivo.nameA = payload.nombre;
         adminActivo.emailU = payload.email;
-        adminActivo.stateU = payload.Estado;
+        adminActivo.stateA = payload.Estado;
         adminActivo.idU = payload.cedula;
         sessionStorage.setItem("administrador", JSON.stringify(adminActivo))
 
