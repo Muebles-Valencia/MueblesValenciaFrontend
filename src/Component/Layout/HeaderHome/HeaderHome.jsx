@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Logo } from '../../Ui/Logo/Logo'
 import { InputHeader } from '../../Ui/InputHeader/InputHeader'
 import { NavHome } from '../NavHome/NavHome'
