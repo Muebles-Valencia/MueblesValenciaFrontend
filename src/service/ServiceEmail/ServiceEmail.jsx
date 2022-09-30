@@ -16,7 +16,7 @@ export const ServiceEmail = ({ nameProduct ,nameProduct2 ,  descriptionProduct ,
         const user2 = JSON.parse(user.toString());
         console.log(user2.nameU);
         console.log(user2.emailU);
-        const URLEmail = "http://localhost:8080/producto/reservarProducto/" + user2.emailU + "/" + user2.nameU + "/" + datePickup
+        const URLEmail = "https://muebleriaback.herokuapp.com/producto/reservarProducto/" + user2.emailU + "/" + user2.nameU + "/" + datePickup
         let tokenUser = localStorage.getItem('user')
         console.log("TOKEN USER " + tokenUser);
         fetch(URLEmail, {

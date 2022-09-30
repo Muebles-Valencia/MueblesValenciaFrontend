@@ -4,7 +4,7 @@ import { Button, } from 'primereact/button';
 export const ServiceEnableProduct = ({id , text}) => {
     
     const enableOrDisable = () => {
-        const URL = "http://localhost:8080/producto/habilitarProducto/" + id
+        const URL = "https://muebleriaback.herokuapp.com/producto/habilitarProducto/" + id
         fetch(URL , {
             method: 'PUT',
             headers: {

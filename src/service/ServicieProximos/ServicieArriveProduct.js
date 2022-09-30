@@ -22,7 +22,7 @@ export const ServicieArriveProduct = ({ cod }) => {
     // const [product, setProductos] = useState("")
 
     function searchProduct() {
-        const urlRegister = 'http://localhost:8080/proximos/buscar/' + cod;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/proximos/buscar/' + cod;
         fetch(urlRegister, {
             method: 'GET',
             headers: {

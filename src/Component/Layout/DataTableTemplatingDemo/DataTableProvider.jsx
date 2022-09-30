@@ -39,7 +39,7 @@ export const DataTableProvider = () => {
     function listSuppliers() {
 
         console.log("LISTANDO PROVEEDORES")
-        const urlRegister = 'http://localhost:8080/proveedores/listaProveedores';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/proveedores/listaProveedores';
         fetch(urlRegister, {
             method: 'GET',
             headers: {
@@ -55,7 +55,7 @@ export const DataTableProvider = () => {
         console.log("ENTRO AL ENVIAR CORREO");
         console.log(emailUser);
         console.log(username);
-        const URLEmail = "http://localhost:8080/producto/reservarProducto/" + emailUser + "/" + username
+        const URLEmail = "https://muebleriaback.herokuapp.com/producto/reservarProducto/" + emailUser + "/" + username
         fetch(URLEmail, {
             method: 'POST',
             headers: {

@@ -58,7 +58,7 @@ export const ServicieRegisterInventario = ({ style, code, nameP, descriptionP,im
            
             // console.log(price)
             // console.log(amount)
-            const urlRegister = 'http://localhost:8080/producto';
+            const urlRegister = 'https://muebleriaback.herokuapp.com/producto';
             let tokenAdmin = localStorage.getItem('admin')
             if (tokenAdmin == "" || tokenAdmin == null) {
                 alert("Por favor registrese")
@@ -99,7 +99,7 @@ export const ServicieRegisterInventario = ({ style, code, nameP, descriptionP,im
    
 
     function deleteProximo(cod) {
-        const urlRegister = 'http://localhost:8080/proximos/eliminarProximos/' + cod;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/proximos/eliminarProximos/' + cod;
         fetch(urlRegister, {
             method: 'DELETE',
             headers: {

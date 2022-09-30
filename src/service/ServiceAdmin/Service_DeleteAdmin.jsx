@@ -4,7 +4,7 @@ export const Service_DeleteAdmin = ({codeAdmin}) => {
     
     function deleteAdmin() {
         console.log("eliminando un admin")
-        const urlDelete = "http://localhost:8080/administradores/eliminarAdministrador/" + codeAdmin;
+        const urlDelete = "https://muebleriaback.herokuapp.com/administradores/eliminarAdministrador/" + codeAdmin;
         let tokenAdmin = localStorage.getItem('admin')
         if(tokenAdmin == "" || tokenAdmin == null){
             alert("Por favor registrese")

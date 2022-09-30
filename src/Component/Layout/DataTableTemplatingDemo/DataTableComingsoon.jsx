@@ -47,7 +47,7 @@ export const DataTableComingsoon = () => {
     function listProximos() {
         console.log(".l.")
         console.log("LISTANDO Proximo")
-        const url = 'http://localhost:8080/proximos/listaProximos';
+        const url = 'https://muebleriaback.herokuapp.com/proximos/listaProximos';
         fetch(url, {
             method: 'GET',
             headers: {

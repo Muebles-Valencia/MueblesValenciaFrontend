@@ -7,8 +7,14 @@ export const Service_ListProduct = () => {
   // const [save, setSave] = useState([])
   
   const getProducts = () => {
-    const url = 'http://localhost:8080/producto/listaProductosPrincipal';
-      fetch(url)
+    const url = 'https://muebleriaback.herokuapp.com/producto/listaProductosPrincipal';
+      fetch(url,{
+        method: 'GET',
+        headers: {
+          "Content-type": "application/json",
+          'Access-Control-Allow-Origin': '*'
+        }
+      })
         .then(response => response.json())
         .then(data =>{
           console.log("esta es la sista que llega\n"+data)

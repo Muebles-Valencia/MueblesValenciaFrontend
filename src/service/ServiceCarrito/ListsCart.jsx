@@ -8,7 +8,7 @@ export const ListsCart = () => {
   
   const [carrito, setCarrito] = useState([])
   const peticion = () => {
-    const url = 'http://localhost:8080/carritoCompras/listarcarrito';
+    const url = 'https://muebleriaback.herokuapp.com/carritoCompras/listarcarrito';
     fetch(url)
       .then(response => response.json())
       .then(data => {

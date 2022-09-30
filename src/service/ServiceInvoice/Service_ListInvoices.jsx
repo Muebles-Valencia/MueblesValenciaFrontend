@@ -44,7 +44,7 @@ export const Service_ListInvoices = () => {
         const user = sessionStorage.getItem("usuario")
         const user2 = JSON.parse(user.toString());
         console.log("CEDULA " +user2.idU);
-        const urlRegister = 'http://localhost:8080/facturas/facturasCliente/' + user2.idU;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/facturas/facturasCliente/' + user2.idU;
         let tokenAdmin = localStorage.getItem('user')
         if (tokenAdmin == "" || tokenAdmin == null) {
             alert("Por favor registrese")

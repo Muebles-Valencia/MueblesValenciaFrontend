@@ -15,7 +15,7 @@ export const IteratCart = ({ listsCart = [], conut }) => {//resive como parametr
 
     let carrito = []
     const peticion = () => {
-    const url = 'http://localhost:8080/carritoCompras/listarcarrito';
+    const url = 'https://muebleriaback.herokuapp.com/carritoCompras/listarcarrito';
     fetch(url)
       .then(response => response.json())
       .then(data => {
@@ -48,7 +48,7 @@ export const IteratCart = ({ listsCart = [], conut }) => {//resive como parametr
             console.log("ID USER " + idUser);
             const cellphoneNumberUser = user2.cellphoneNumberU
             const priceTotal = t
-            const urlRegisterInvoice = "http://localhost:8080/facturas/registrarFactura"
+            const urlRegisterInvoice = "https://muebleriaback.herokuapp.com/facturas/registrarFactura"
             let tokenAdmin = localStorage.getItem('user')
             console.log("TOKEN ADMIN");
             if (tokenAdmin == "" || tokenAdmin == null) {
@@ -112,11 +112,12 @@ export const IteratCart = ({ listsCart = [], conut }) => {//resive como parametr
         // toast.current.show({severity: 'success', summary: 'Success Message', detail: 'Order submitted'});
 
 
-        const urlRegister = 'http://localhost:8080/carritoCompras/actualizarCarrito/' + codigo;//se le pasa por parametro el codigo del carrito
+        const urlRegister = 'https://muebleriaback.herokuapp.com/carritoCompras/actualizarCarrito/' + codigo;//se le pasa por parametro el codigo del carrito
         fetch(urlRegister, {
             method: 'PUT',
             headers: {
-                "Content-type": "application/json"
+                "Content-type": "application/json",
+                "Access-Control-Allow-Origin": '*' 
             },
             body: JSON.stringify({
                 codigo_Carrito: codigo,

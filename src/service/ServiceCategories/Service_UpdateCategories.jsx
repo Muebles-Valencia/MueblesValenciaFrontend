@@ -21,7 +21,7 @@ export const Service_UpdateCategories = ({codeCategoriUpdate}) => {
     function searchCategori () {
       console.log("entro a buscar una categoria")
       console.log("codigo"+codeCategoriUpdate)
-        const urlRegister = 'http://localhost:8080/categorias/buscarCategoriaCodigo/' + codeCategoriUpdate;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/categorias/buscarCategoriaCodigo/' + codeCategoriUpdate;
         fetch(urlRegister, {
             method: 'GET',
             headers: {
@@ -58,7 +58,7 @@ export const Service_UpdateCategories = ({codeCategoriUpdate}) => {
         console.log("estoy editando una categoria")
         const name_category = document.getElementById("inputName").value
         console.log("nombre"+name_category)
-        const urlRegister = 'http://localhost:8080/categorias/actualizarCategoria/' + codeCategoriUpdate;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/categorias/actualizarCategoria/' + codeCategoriUpdate;
         fetch(urlRegister, {
             method: 'PUT',
             headers: {

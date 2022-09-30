@@ -10,7 +10,7 @@ export const Furniture = () => {
     const [products , setProducts] = useState([])
 
     const getCategory = () => {
-        const urlSearch = "http://localhost:8080/categorias/buscarCategoria/" + 3
+        const urlSearch = "https://muebleriaback.herokuapp.com/categorias/buscarCategoria/" + 3
         fetch(urlSearch, {
           method: 'GET',
           headers: {

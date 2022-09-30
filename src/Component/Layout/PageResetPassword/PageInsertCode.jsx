@@ -62,7 +62,7 @@ export const PageInsertCode = () => {
 
     function insertCode() {
         getFinalCode()
-        const URL = 'http://localhost:8080/clientes/compararCodigo/' + code;
+        const URL = 'https://muebleriaback.herokuapp.com/clientes/compararCodigo/' + code;
         fetch(URL, {
             method: 'GET'
         })

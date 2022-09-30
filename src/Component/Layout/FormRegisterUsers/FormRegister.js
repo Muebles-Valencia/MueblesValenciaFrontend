@@ -125,7 +125,7 @@ export const FormRegister = () => {
 
     function registerClient() {
         console.log("estoy registrando un cliente")
-        const urlRegister = 'http://localhost:8080/clientes';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/clientes';
         if(formik.values.accept == true){
             fetch(urlRegister, {
                 method: 'POST',

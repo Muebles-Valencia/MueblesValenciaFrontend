@@ -14,7 +14,7 @@ export const PageInsertNewPassword = () => {
     let navigate = useNavigate()
     function insertNewPassword() {
         if(newPassword == verifyNewPassword){
-            const URL = 'http://localhost:8080/clientes/actualizarContraseña/' + newPassword;
+            const URL = 'https://muebleriaback.herokuapp.com/clientes/actualizarContraseña/' + newPassword;
             fetch(URL, {
                 method: 'PUT',
                 headers: {

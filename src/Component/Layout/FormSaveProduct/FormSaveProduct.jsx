@@ -21,7 +21,7 @@ export const FormSaveProduct = ({ onChange1, onChange2, onchange3, onchange4, on
 
     function listSuppliers() {
         console.log("LISTANDO PROVEEDORES")
-        const urlRegister = 'http://localhost:8080/proveedores/listaProveedores';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/proveedores/listaProveedores';
         fetch(urlRegister, {
             method: 'GET',
             headers: {
@@ -33,7 +33,7 @@ export const FormSaveProduct = ({ onChange1, onChange2, onchange3, onchange4, on
     }
 
     function listCategories() {
-        const urlRegister = 'http://localhost:8080/categorias/listarCategorias';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/categorias/listarCategorias';
         fetch(urlRegister, {
             method: 'GET',
             headers: {

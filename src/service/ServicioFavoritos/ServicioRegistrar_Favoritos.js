@@ -17,7 +17,7 @@ export const ServicioRegistrar_Favoritos = ({ codigoF, nameP = '', descripcionP 
         
         let cantidad = 1
         console.log(codigoF, nameP, descripcionP, precioP, imagenP)
-        const url = 'http://localhost:8080/favoritos'
+        const url = 'https://muebleriaback.herokuapp.com/favoritos'
         let tokenAdmin = localStorage.getItem('user')
         if (tokenAdmin == "" || tokenAdmin == null) {
             alert("Por favor registrese")

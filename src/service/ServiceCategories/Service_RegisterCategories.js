@@ -23,7 +23,7 @@ export const Service_RegisterCategories = ({style}) => {
   
       function registerCategory() {
           console.log("estoy registrando un proveedor")
-          const urlRegister = 'http://localhost:8080/categorias';
+          const urlRegister = 'https://muebleriaback.herokuapp.com/categorias';
           console.log(urlRegister)
           let tokenAdmin = localStorage.getItem('admin')
           console.log(tokenAdmin)

@@ -33,7 +33,7 @@ export const Service_RegisterAdmin = ({style}) => {
 
     function registerAdmin() {
         console.log("registrando un admin")
-        const urlRegister = 'http://localhost:8080/administradores/registrarAdministrador';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/administradores/registrarAdministrador';
         let tokenAdmin = localStorage.getItem('admin')
         if(tokenAdmin == "" || tokenAdmin == null){
             alert("Por favor registrese")

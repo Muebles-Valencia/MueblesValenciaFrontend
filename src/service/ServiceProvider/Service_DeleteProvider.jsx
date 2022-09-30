@@ -3,7 +3,7 @@ import React from 'react'
 export const Service_DeleteProvider = ({id}) => {
   
     function deleteProvider() {
-        const URL = "http://localhost:8080/proveedores/eliminarProveedor/" + id
+        const URL = "https://muebleriaback.herokuapp.com/proveedores/eliminarProveedor/" + id
         let tokenAdmin = localStorage.getItem('admin')
         if(tokenAdmin == "" || tokenAdmin == null){
             alert("Por favor registrese")

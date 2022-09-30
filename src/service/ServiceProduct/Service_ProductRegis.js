@@ -77,7 +77,7 @@ export const Service_ProductRegis = ({ style }) => {
         console.log("estoy registrando un producto")
         console.log(price)
         console.log(amount)
-        const urlRegister = 'http://localhost:8080/producto';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/producto';
         let tokenAdmin = localStorage.getItem('admin')
         if (tokenAdmin == "" || tokenAdmin == null) {
             alert("Por favor registrese")

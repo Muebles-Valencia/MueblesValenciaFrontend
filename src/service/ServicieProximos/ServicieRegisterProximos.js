@@ -79,7 +79,7 @@ export const ServicieRegisterProximos = ({ style }) => {
             console.log("estoy registrando un producto")
             console.log(price)
             console.log(amount)
-            const urlRegister = 'http://localhost:8080/proximos';
+            const urlRegister = 'https://muebleriaback.herokuapp.com/proximos';
             let tokenAdmin = localStorage.getItem('admin')
             if (tokenAdmin == "" || tokenAdmin == null) {
                 alert("Por favor registrese")

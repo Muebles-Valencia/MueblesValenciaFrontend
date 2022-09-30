@@ -37,7 +37,7 @@ export const DataTableAdmins = () => {
     function listAdmins() {
 
         console.log("LISTANDO ADMINS")
-        const urlRegister = 'http://localhost:8080/administradores/consultarTodosLosAdministradores';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/administradores/consultarTodosLosAdministradores';
         let tokenAdmin = localStorage.getItem('admin')
         fetch(urlRegister, {
             method: 'GET',

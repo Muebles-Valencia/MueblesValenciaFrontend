@@ -31,7 +31,7 @@ export const Service_UpdateUser = ({ }) => {
         const user = sessionStorage.getItem("usuario")
         const user2 = JSON.parse(user.toString());
         console.log("CEDULA " + user2.idU);
-        const urlRegister = 'http://localhost:8080/clientes/buscarCliente/' + user2.idU;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/clientes/buscarCliente/' + user2.idU;
         fetch(urlRegister, {
             method: 'GET',
             headers: {
@@ -61,7 +61,7 @@ export const Service_UpdateUser = ({ }) => {
         const email = document.getElementById("inputEmail").value
         const date = document.getElementById("inputDate").value
         const password = document.getElementById("inputpassword").value
-        const urlRegister = 'http://localhost:8080/clientes/' + documnet;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/clientes/' + documnet;
         let tokenUser = localStorage.getItem("user")
         if (tokenUser == "" || tokenUser == null) {
             alert("Por favor registrese")

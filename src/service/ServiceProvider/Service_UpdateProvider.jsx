@@ -17,7 +17,7 @@ export const Service_UpdateProvider = ({codeProviderUpdate}) => {
   function searchProvider () {
     console.log("entro a buscar un proveedor")
     console.log(codeProviderUpdate)
-      const urlRegister = 'http://localhost:8080/proveedores/buscarProveedor/' + codeProviderUpdate;
+      const urlRegister = 'https://muebleriaback.herokuapp.com/proveedores/buscarProveedor/' + codeProviderUpdate;
       fetch(urlRegister, {
           method: 'GET',
           headers: {
@@ -52,7 +52,7 @@ export const Service_UpdateProvider = ({codeProviderUpdate}) => {
       console.log(name_provider)
       const phone = document.getElementById("inputPhone").value
       console.log(phone)
-      const urlRegister = 'http://localhost:8080/proveedores/actualizarProveedor/' + codeProviderUpdate;
+      const urlRegister = 'https://muebleriaback.herokuapp.com/proveedores/actualizarProveedor/' + codeProviderUpdate;
       fetch(urlRegister, {
           method: 'PUT',
           headers: {

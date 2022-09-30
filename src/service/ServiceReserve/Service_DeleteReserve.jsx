@@ -4,7 +4,7 @@ export const Servicie_DeleteReserve = ({codigo,className}) => {
 
     function deleteReserve() {
         console.log("CODIGO " + codigo);
-        const urlRegister = 'http://localhost:8080/reserva/eliminarReserva/';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/reserva/eliminarReserva/';
         fetch(urlRegister + codigo, {
             method: 'DELETE',
             headers: {

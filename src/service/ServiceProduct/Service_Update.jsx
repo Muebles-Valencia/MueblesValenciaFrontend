@@ -24,7 +24,7 @@ export const Service_Update = ({ codeProductUpdate }) => {
 
     function searchProduct() {
         console.log("buscarproducto")
-        const urlRegister = 'http://localhost:8080/producto/buscar/' + codeProductUpdate;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/producto/buscar/' + codeProductUpdate;
         fetch(urlRegister, {
             method: 'GET',
             headers: {
@@ -48,7 +48,7 @@ export const Service_Update = ({ codeProductUpdate }) => {
 
 
     function listCategories() {
-        const urlRegister = 'http://localhost:8080/categorias/listarCategorias';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/categorias/listarCategorias';
         fetch(urlRegister, {
             method: 'GET',
             headers: {
@@ -62,7 +62,7 @@ export const Service_Update = ({ codeProductUpdate }) => {
 
     const setDataCategory = (category) => {
         console.log(category);
-        fetch("http://localhost:8080/producto/consultarCategoria/" + category, {
+        fetch("https://muebleriaback.herokuapp.com/producto/consultarCategoria/" + category, {
             method: 'GET'
         })
             .then(response => response.json())
@@ -110,7 +110,7 @@ export const Service_Update = ({ codeProductUpdate }) => {
         const price = document.getElementById("inputPrice").value
         const amount = document.getElementById("inputAmount").value
         console.log(name_supplier_product);
-        const urlRegister = 'http://localhost:8080/producto/actualizar/' + codeProductUpdate;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/producto/actualizar/' + codeProductUpdate;
         let tokenAdmin = localStorage.getItem('admin')
         if (tokenAdmin == "" || tokenAdmin == null) {
             alert("Por favor registrese")
@@ -148,7 +148,7 @@ export const Service_Update = ({ codeProductUpdate }) => {
 
     function listSuppliers() {
         console.log("LISTANDO PROVEEDORES")
-        const urlRegister = 'http://localhost:8080/proveedores/listaProveedores';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/proveedores/listaProveedores';
         fetch(urlRegister, {
             method: 'GET',
             headers: {

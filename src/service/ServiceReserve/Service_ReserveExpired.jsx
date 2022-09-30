@@ -22,7 +22,7 @@ export const Service_ReserveExpired = () => {
         const user = sessionStorage.getItem("usuario")
         const user2 = JSON.parse(user.toString());
         console.log("CEDULA " +user2.idU);
-        const url = 'http://localhost:8080/reserva/reservasExpiradasCliente/' + user2.idU;
+        const url = 'https://muebleriaback.herokuapp.com/reserva/reservasExpiradasCliente/' + user2.idU;
         fetch(url, {
             method: 'GET',
             headers: {

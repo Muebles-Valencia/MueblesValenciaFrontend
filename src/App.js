@@ -6,7 +6,7 @@ import "primeicons/primeicons.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Home } from "./Component/Page/Home/Home";
 import { RegisterUser } from "./Component/Page/RegisterUser/RegisterUser";
-import { Route , Routes} from "react-router-dom";
+import { Route , Router, Routes} from "react-router-dom";
 import { RegisterProduct } from './Component/Page/RegisterProduct/RegisterProduct';
 import { PageMainAdmin } from './Component/Page/PageMainAdmin/PageMainAdmin';
 import { RegisterProvider } from './Component/Page/RegisterProvider/RegisterProvider';
@@ -29,6 +29,7 @@ import { PageInsertCode } from './Component/Layout/PageResetPassword/PageInsertC
 import { PageInsertNewPassword } from './Component/Layout/PageResetPassword/PageInsertNewPassword';
 import { PageAdmin } from './Component/Layout/PageAdmin/PageAdmin';
 import { Service_ListReservesClient } from './service/ServiceReserve/Service_ListReservesClient';
+import ProtectedRoutes from './ProtectedRoutes';
 
 function App() {
   return (
@@ -53,8 +54,10 @@ function App() {
         <Route path='listInvoices' element={<Service_ListInvoices/>}/>
         <Route path='/reservesExpiredAdmin' element={<Service_ReserveExpiredAdmin/>}/>
         <Route path='/tableAdmins' element={<DataTableAdmins/>}/>
-        <Route path='pageEditProfile' element={<Service_UpdateUser/>}/>
-        <Route path='/registerProximo' element={<PageComingSoon/>}/>
+        <Route element={<ProtectedRoutes/>}>
+          <Route path='pageEditProfile' element={<Service_UpdateUser/>}/>
+          <Route path='/registerProximo' element={<PageComingSoon/>}/>
+        </Route>
         <Route path='/pageSendCode' element={<PageSendCode/>}/>
         <Route path='/pageInsertCode' element={<PageInsertCode/>}/>
         <Route path='/insertNewPassword' element={<PageInsertNewPassword/>}/>

@@ -24,7 +24,7 @@ export const DataTableTemplatingDemo = () => {
     function listProducts() {
 
         console.log("LISTANDO PRODUCTOS")
-        const urlRegister = 'http://localhost:8080/producto/listaProductos';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/producto/listaProductos';
         fetch(urlRegister, {
             method: 'GET',
             headers: {

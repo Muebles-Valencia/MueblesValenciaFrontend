@@ -19,7 +19,7 @@ export const RegistrarCarrito = ({ codigoP ,nameP = '', descripcionP = '', preci
     function saveCart() {
         console.log("hholaflfafafafafa")
         let cantidad=1
-        const url = 'http://localhost:8080/carritoCompras'
+        const url = 'https://muebleriaback.herokuapp.com/carritoCompras'
         fetch(url, {
             method: 'POST',
             headers: {

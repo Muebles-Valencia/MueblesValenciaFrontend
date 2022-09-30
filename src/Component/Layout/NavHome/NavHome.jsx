@@ -88,9 +88,9 @@ export const NavHome = () => {
     const guardarAdmin = (accessToken = "") => {
 
         let payload = obtenerDatosToken(accessToken);
-        adminActivo.nameU = payload.nombre;
+        adminActivo.nameA = payload.nombre;
         adminActivo.emailU = payload.email;
-        adminActivo.stateU = payload.Estado;
+        adminActivo.stateA = payload.Estado;
         adminActivo.idU = payload.cedula;
         sessionStorage.setItem("administrador", JSON.stringify(adminActivo))
 
@@ -122,8 +122,10 @@ export const NavHome = () => {
                 localStorage.setItem('admin' , token.access_token)
                 let tokenAdmin = localStorage.getItem('admin')
                 guardarAdmin(token.access_token)
+
                 setVisible(false)   
                 guardarUsuario(token.access_token)         
+
                 const admin = sessionStorage.getItem("administrador")
                 const admin2 = JSON.parse(admin.toString());
                 document.getElementById("nameAccount").textContent = admin2.nameU
@@ -133,7 +135,9 @@ export const NavHome = () => {
         }
     }
 
+
 useEffect(() => {
+
     const user = sessionStorage.getItem("usuario")
     if (user == null || user == ""){
         document.getElementById("logout").classList.add("logoutHide")
@@ -143,8 +147,9 @@ useEffect(() => {
         document.getElementById("nameAccount").textContent = user2.nameU
     }
 }, [])
+
     function login() {
-        const urlEndpoint = 'http://localhost:8080/oauth/token';
+        const urlEndpoint = 'https://muebleriaback.herokuapp.com/oauth/token';
         const credenciales = btoa('reactapp' + ':' + '12345');
         const params = new URLSearchParams();
         params.append('username', email);

@@ -49,7 +49,7 @@ export const Service_RegisterProvider = ({style}) => {
 
     function registerProvider() {
         console.log("estoy registrando un proveedor")
-        const urlRegister = 'http://localhost:8080/proveedores/registrarProveedor';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/proveedores/registrarProveedor';
         console.log(urlRegister)
         let tokenAdmin = localStorage.getItem('admin')
         if(tokenAdmin == "" || tokenAdmin == null){

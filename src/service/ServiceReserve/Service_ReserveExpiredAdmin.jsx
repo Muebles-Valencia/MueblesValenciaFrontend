@@ -21,7 +21,7 @@ export const Service_ReserveExpiredAdmin = () => {
     let [selectedReserve, setReserveSelected] = useState(null);
     const getReserves = () => {
         let tokenAdmin = localStorage.getItem("admin")
-        const url = 'http://localhost:8080/reserva/listarReservasExpiradas';
+        const url = 'https://muebleriaback.herokuapp.com/reserva/listarReservasExpiradas';
         fetch(url, {
             method: 'GET',
             headers: {

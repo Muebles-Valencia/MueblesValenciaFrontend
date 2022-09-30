@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 export const ServiceDeleteComingSoon = ({cod}) => {
      
     function deleteComingSoon () {
-        const urlRegister = 'http://localhost:8080/proximos/eliminarProximos/' + cod;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/proximos/eliminarProximos/' + cod;
         fetch(urlRegister, {
             method: 'DELETE',
             headers: {

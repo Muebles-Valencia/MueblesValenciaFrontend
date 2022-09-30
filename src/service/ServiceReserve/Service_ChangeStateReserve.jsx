@@ -5,7 +5,7 @@ export const Service_ChangeStateReserve = ({code , text}) => {
     
     const changeState = () => {
         let tokenAdmin = localStorage.getItem("admin")
-        const url = 'http://localhost:8080/reserva/cambiarEstadoReserva/' + code;
+        const url = 'https://muebleriaback.herokuapp.com/reserva/cambiarEstadoReserva/' + code;
         fetch(url, {
             method: 'PUT',
             headers: {

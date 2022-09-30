@@ -14,7 +14,7 @@ export const ServicieDeleteCart = ({ codigo, press}) => {//tiene como propiedad 
   const [visible2, setVisible2] = useState(false)
   function deleteProduct() {
 
-    const urlRegister = 'http://localhost:8080/carritoCompras/eliminarCarrito/';
+    const urlRegister = 'https://muebleriaback.herokuapp.com/carritoCompras/eliminarCarrito/';
     fetch(urlRegister + codigo, {
       method: 'DELETE',
       headers: {

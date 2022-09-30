@@ -13,7 +13,7 @@ export const ServicieDelete_Favorite = ({codigo,className}) => {
 
     function deleteProduct() {
 
-        const urlRegister = 'http://localhost:8080/favoritos/eliminarFavoritos/';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/favoritos/eliminarFavoritos/';
         fetch(urlRegister + codigo, {
             method: 'DELETE',
             headers: {

@@ -15,7 +15,7 @@ export const ServicioList_Favorites = ({ accion }) => {
 
     const getFavorites = () => {
 
-        const url = 'http://localhost:8080/favoritos/listfavoritos';
+        const url = 'https://muebleriaback.herokuapp.com/favoritos/listfavoritos';
         fetch(url)
             .then(response => response.json())
             .then(data => {

@@ -21,7 +21,7 @@ export const Service_EditReserve = ({ codeReserve }) => {
     const [dateReserve, setDateReserve] = useState("")
 
     function searchReserve() {
-        const urlRegister = 'http://localhost:8080/reserva/buscarReservaIndividual/' + codeReserve;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/reserva/buscarReservaIndividual/' + codeReserve;
         fetch(urlRegister, {
             method: 'GET',
             headers: {
@@ -56,7 +56,7 @@ export const Service_EditReserve = ({ codeReserve }) => {
         const nameClientReserve = document.getElementById("inputName").value
         const datePickupReserve = document.getElementById("inputPickup").value
         console.log(nameClientReserve);
-        const urlRegister = 'http://localhost:8080/reserva/editarReserva/' + codeReserve;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/reserva/editarReserva/' + codeReserve;
         fetch(urlRegister, {
             method: 'PUT',
             headers: {

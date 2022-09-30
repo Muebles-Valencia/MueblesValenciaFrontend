@@ -12,7 +12,7 @@ export const PageProductsFilter = () => {
   const [products, setProducts] = useState([])
 
   const filterPrice = () => {
-    const urlFilter = "https://localhost:8080/producto/filtrar/" + localStorage.getItem("minimo") + "/" + localStorage.getItem("maximo")
+    const urlFilter = "https://muebleriaback.herokuapp.com/producto/filtrar/" + localStorage.getItem("minimo") + "/" + localStorage.getItem("maximo")
     fetch(urlFilter, {
       method: 'GET',
       headers: {

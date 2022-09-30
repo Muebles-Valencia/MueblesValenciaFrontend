@@ -39,7 +39,7 @@ export const DataTableCategories = () => {
     function listCategory() {
 
         console.log("LISTANDO CATEGORIAS")
-        const urlRegister = 'http://localhost:8080/categorias/listarCategorias';
+        const urlRegister = 'https://muebleriaback.herokuapp.com/categorias/listarCategorias';
         fetch(urlRegister, {
             method: 'GET',
             headers: {

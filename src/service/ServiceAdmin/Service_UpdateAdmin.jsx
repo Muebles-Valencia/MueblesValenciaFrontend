@@ -51,7 +51,7 @@ export const Service_UpdateAdmin = ({codeAdminUpdate}) => {
         const password_admin = document.getElementById("inputPassword").value
 
         console.log("nombre "+ name_admin)
-        const urlRegister = 'http://localhost:8080/administradores/actualizarAdministrador/' + codeAdminUpdate + "/" + adm.correo_administrador;
+        const urlRegister = 'https://muebleriaback.herokuapp.com/administradores/actualizarAdministrador/' + codeAdminUpdate + "/" + adm.correo_administrador;
         fetch(urlRegister, {
             method: 'PUT',
             headers: {
