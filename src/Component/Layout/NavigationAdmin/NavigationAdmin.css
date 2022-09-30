@@ -36,6 +36,8 @@
   border: none;
   /* background-color: white; */
   background-color: transparent;
+  text-align: center;
+  text-decoration: none;
   
 }
 .iconAdmin:hover {

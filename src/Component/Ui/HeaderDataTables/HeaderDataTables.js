@@ -142,9 +142,9 @@ export const HeaderDataTables = ({ text }) => {
                     </div>
 
                 </Sidebar>
-                <button className='iconAdmin' onClick={logout}>
+                {/* <button className='iconAdmin' onClick={logout}>
                     <div className='button-biwrench'><GiExitDoor style={{ fontSize: '30px' }} />Cerrar sesion</div>
-                </button>
+                </button> */}
 
             </nav>
 
