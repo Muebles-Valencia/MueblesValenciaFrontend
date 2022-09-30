@@ -55,7 +55,7 @@ export const ServicieRegisterInventario = ({ style, code, nameP, descriptionP,im
 
     function registerProduct() {
         if(nameP!=null){
-            console.log("estoy registrando un producto"+category.id_categoria)
+           
             // console.log(price)
             // console.log(amount)
             const urlRegister = 'http://localhost:8080/producto';

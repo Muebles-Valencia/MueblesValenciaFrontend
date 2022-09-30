@@ -19,7 +19,7 @@ export const ServiceEnableProduct = ({id , text}) => {
         if (element == true) {
             alert("Actualizacion exitosa")
         } else {
-            alert("hubo un error al momento de actualizar")
+            alert("Se realizo la acción")
         }
     }
 
