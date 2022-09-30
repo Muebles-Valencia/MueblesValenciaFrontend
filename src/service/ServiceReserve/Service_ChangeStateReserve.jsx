@@ -1,4 +1,5 @@
 import React from 'react'
+import toast from 'react-hot-toast'
 import './ServiceReserve.css'
 export const Service_ChangeStateReserve = ({code , text}) => {
     
@@ -12,8 +13,12 @@ export const Service_ChangeStateReserve = ({code , text}) => {
                 "Authorization" : "Bearer " + tokenAdmin
             }
         })
-            .then(response => response.json())
-            .then(reserve => console.log(reserve))
+            .then(response => {
+                if(response.ok){
+                    toast("Estado cambiado exitosamente",{className:'send-toast',duration:'200',position:'bottom-left'})
+                }
+            })
+            // .then(reserve => console.log(reserve))
     }
 
     return (
